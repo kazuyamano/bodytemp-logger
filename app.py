@@ -25,7 +25,7 @@ def add_entry():
   df_index = df.index.tolist()
   return render_template('result.html', title='{}さんの送信を受け付けました！'.format(Jcode), df_columns=df_columns, df_values=df_values, df_index=df_index)
 
-@app.route('/view_logs')
+@app.route('/view_logs', methods=['post','get'])
 def view_logs():
   df = pd.read_csv('static/BodyTemp_data.csv',index_col=0)
   df_columns = df.columns.tolist()
