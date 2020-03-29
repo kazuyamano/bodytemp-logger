@@ -1,0 +1,44 @@
+body {
+ background-color: lightyellow;
+}
+table {
+  margin-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+  text-align: right;
+  padding: 0.4em;
+}
+thead {
+  color: #ffffff;
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+thead th {
+  background: #585858;
+  text-align: center;
+
+}
+tbody tr:nth-child(odd) {
+  background: #e9e9e9;
+}
+tbody tr:nth-child(even) {
+  background: #ffffff;
+}
+tr, th, td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+th {
+  font-weight: bold;
+}

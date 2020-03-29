@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>検温チェッカー</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+	<br>
+	<h1>{{ title }}</h1>
+	<form action="{{ url_for('add_entry') }}" method=post enctype="multipart/form-data">
+		<p>従業員コードは？
+			<input type="text" name="jcode"" maxlength="7">  ※半角7桁で！</p>
+		<p>今朝の体温は？　
+			<input type="text" name="temp" maxlength="4">  ※半角○○.○で！</p>
+		<P><input type="submit" value="送る"></P>
+	</form>
+	<br>
+	<p>過去履歴のcsvダウンロードは、<a href='/static/BodyTemp_data.csv'>こちらから</a></p>
+
+</body>
+</html>
