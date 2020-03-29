@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['get'])
 def show_index():
-  return render_template('daily-check.html', title = '検温タ〜〜イム！')
+  return render_template('daily-check.html', title = '検温ターーイム！')
 
 
 @app.route('/result', methods=['POST'])
