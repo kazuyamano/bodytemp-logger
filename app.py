@@ -25,6 +25,10 @@ def add_entry():
   df_index = df.index.tolist()
   return render_template('result.html', title='{}さんの送信を受け付けました！'.format(Jcode), df_columns=df_columns, df_values=df_values, df_index=df_index)
 
+@app.errorhandler(500)
+def InternalServerError(error):
+  return render_template('daily-check_retry.html', title = '体温の入力、ミスったぽいですよ'))
+
 @app.route('/view_logs', methods=['post','get'])
 def view_logs():
   df = pd.read_csv('static/BodyTemp_data.csv',index_col=0)
