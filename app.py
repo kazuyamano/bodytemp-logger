@@ -27,7 +27,7 @@ def add_entry():
 
 @app.errorhandler(500)
 def InternalServerError(error):
-  return render_template('daily-check_retry.html', title = '体温の入力、ミスったぽいですよ')
+  return render_template('daily-check_retry.html', title = 'Erorr: 体温の入力、ミスったぽいですよ')
 
 @app.route('/view_logs', methods=['post','get'])
 def view_logs():
