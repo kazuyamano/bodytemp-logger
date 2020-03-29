@@ -8,7 +8,8 @@
 </head>
 <body>
 	<h1>{{ title }}</h1>
-	<p>csvダウンロードは、<a href='/static/BodyTemp_data.csv'>こちらから</a></p>
+  <p>csvダウンロードは、<a href='/static/BodyTemp_data.csv'>こちらから</a></p>
+  <p>入力画面は、<a href='/'>こちらから</a></p>
 	<table align=left>
 		<thead>
 			<tr>{%- for i in df_columns %}<th>{{ i }}</th>{%- endfor %}</tr>
