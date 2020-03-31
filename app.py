@@ -19,13 +19,11 @@ def add_entry():
   Temp = request.form.get('temp')
   df.loc[str(Date),str(Jcode)]=round(float(Temp),1)
   df.to_csv('static/BodyTemp_data.csv')
-  df_jcode = df[Jcode]
-  df_jcode.to_csv('static/{}_data.csv'.format(Jcode))
   df_columns = df.columns.tolist()
   df_columns.insert(0,'date')
   df_values = df.values.tolist()
   df_index = df.index.tolist()
-  return render_template('result.html', title='{}さんの送信を受け付けました！'.format(Jcode), df_columns=df_columns, df_values=df_values, df_index=df_index, Jcode=Jcode)
+  return render_template('result.html', title='{}さんの送信を受け付けました！'.format(Jcode), df_columns=df_columns, df_values=df_values, df_index=df_index)
 
 @app.errorhandler(500)
 def InternalServerError(error):
